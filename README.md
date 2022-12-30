@@ -25,6 +25,7 @@ MENU OPTIONS:
 
 
 INFORMATION’S THAT WILL STORE AND PROVIDE :
+
 ◌ Student Name
 
 ◌ Student ID
