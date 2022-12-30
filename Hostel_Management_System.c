@@ -30,9 +30,9 @@ int main(){
     	int i=0;
     	char choice;
 
-    printf("\t\t|----------------------------------------------------------------------------|\n");
-    printf("\t\t| LOGGED IN SUCCESSFULLY......                                               |\n");
-    printf("\t\t|----------------------------------------------------------------------------|\n");
+    	printf("\t\t|----------------------------------------------------------------------------|\n");
+    	printf("\t\t| LOGGED IN SUCCESSFULLY......                                               |\n");
+    	printf("\t\t|----------------------------------------------------------------------------|\n");
 	printf("\t\t||                                                                          ||\n");
 	printf("\t\t||                                                                          ||\n");
 	printf("\t\t||           ##########    ##########    ##       ##      #######           ||\n");
@@ -53,9 +53,9 @@ int main(){
 	printf("\t\t\t  *       -----------------------------------------       *\n");
 	printf("\t\t\t  *                                                       *\n");
 	printf("\t\t\t  *                                                       *\n");
-	printf("\t\t\t  *                        BY                             *\n");
-	printf("\t\t\t  *                 CSE 1AM Autumn 2022                   *\n");
-	printf("\t\t\t  *            		   C223005 			*\n");
+	printf("\t\t\t  *                           BY                          *\n");
+	printf("\t\t\t  *                 REZOWAN SIFAT || C223005              *\n");
+	printf("\t\t\t  *            	       			                *\n");
 	printf("\t\t\t  *********************************************************\n\n\n");
 
 	printf(" \n Press any key to continue:");
@@ -76,9 +76,9 @@ int main(){
 		printf("\n\n");
 
 
-		printf("\t\t\t\t    *Please enter your choice for menu*:");
-		printf("\n\n");
-		printf("\t\t\t          -----------------------------------------\n");
+	printf("\t\t\t\t    *Please enter your choice for menu*:");
+	printf("\n\n");
+	printf("\t\t\t          -----------------------------------------\n");
         printf("\t\t\t          Enter 1 -> Register A Student      \n");
         printf("\t\t\t          -----------------------------------------\n");
 
@@ -155,8 +155,8 @@ void login()
 	system("cls");
 
 
-    printf("\t\t\t  *********************************************************\n");
-    printf("\t\t\t  *                                                       *\n");
+    	printf("\t\t\t  *********************************************************\n");
+    	printf("\t\t\t  *                                                       *\n");
 	printf("\t\t\t  *                                                       *\n");
 	printf("\t\t\t  *       -----------------------------------------       *\n");
 	printf("\t\t\t  *        LOGIN TO IIUC HOSTEL MANAGEMENT SYSTEM         *\n");
