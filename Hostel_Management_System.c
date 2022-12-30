@@ -6,8 +6,9 @@
 void add();
 void list();
 void edit();
-void delete();
+void delete1();
 void search();
+void roomdetails();
 
 //STRUCTURE DECLARATION
 struct StudentDetails
@@ -54,7 +55,7 @@ int main(){
 	printf("\t\t\t  *                                                       *\n");
 	printf("\t\t\t  *                        BY                             *\n");
 	printf("\t\t\t  *                 CSE 1AM Autumn 2022                   *\n");
-	printf("\t\t\t  *            		   C223005 			            	*\n");
+	printf("\t\t\t  *            		   C223005 			*\n");
 	printf("\t\t\t  *********************************************************\n\n\n");
 
 	printf(" \n Press any key to continue:");
@@ -98,7 +99,11 @@ int main(){
         printf("\t\t\t          -----------------------------------------\n");
 
         printf("\t\t\t          -----------------------------------------\n");
-        printf("\t\t\t          Enter 6 -> Exit      \n");
+        printf("\t\t\t          Enter 6 -> Room Details      \n");
+        printf("\t\t\t          -----------------------------------------\n");
+
+        printf("\t\t\t          -----------------------------------------\n");
+        printf("\t\t\t          Enter 7 -> Exit      \n");
         printf("\t\t\t          -----------------------------------------\n");
 
 		choice=getche(); //conio.h. It reads a single character from the keyboard and displays immediately on output screen without waiting for enter key.
@@ -116,6 +121,8 @@ int main(){
 			case '5':
 				edit();break;
 			case '6':
+				roomdetails();break;	
+			case '7':
 				system("cls");
 					printf("\n ");
                     printf("\t\t\t  *********************************************************\n");
@@ -285,7 +292,7 @@ void list()
 }
 
 //DELETE FUNCTION
-void delete()
+void delete1()
 {
 	FILE *f,*t;
 	int i=1;
@@ -336,6 +343,8 @@ void delete()
 	fclose(t);
 	getch();
 }
+
+//SEARCH FUNCTION
 void search()
 {
 system("cls");
@@ -459,4 +468,55 @@ void edit()
 	printf("\n\n\t\t\tYOUR RECORD IS SUCCESSFULLY EDITED!!!");
 	getch();
 }
+}
+
+//ROOM DETAILS FUNCTION
+void roomdetails()
+{
+system("cls");
+	FILE *f;
+	char roomno[20];
+	int flag=1, sit=1, lim=5;
+	f=fopen("add.txt","r+");
+	if(f==0)
+		exit(0);
+	fflush(stdin);
+	printf("\n ");
+    printf("\t\t\t  *********************************************************\n");
+    printf("\t\t\t  *       -----------------------------------------       *\n");
+    printf("\t\t\t  *                 Enter the room number                 *\n");
+    printf("\t\t\t  *             to search the room details                *\n");
+    printf("\t\t\t  *       -----------------------------------------       *\n");
+    printf("\t\t\t  *********************************************************\n\n\n");
+
+	printf("\t\t\t          -----------------------------------------        \n");
+    printf("\t\t\t           Enter room number:- "); scanf("%s",roomno);
+    printf("\n\n");
+	while(fread(&s,sizeof(s),1,f)==1)
+	{
+		if(strcmp(s.roomnumber,roomno)==0){
+			flag=0;
+
+            printf("\t\t\t          RECORD %d FOUND        \n", sit);
+            printf("\t\t\t          -----------------------------------------        \n");
+            printf("\t\t\t           Student Name:- %s\n",s.name);
+            printf("\t\t\t          -----------------------------------------        \n");
+            printf("\t\t\t           Student ID:- %s\n",s.id);
+            printf("\t\t\t          -----------------------------------------        \n");
+            printf("\t\t\t           Student department:- %s\n",s.department);
+            printf("\t\t\t          -----------------------------------------        \n");
+            printf("\t\t\t           Phone Number:- %s\n",s.phonenumber);
+            printf("\t\t\t          -----------------------------------------        \n\n\n");
+
+			flag=0;
+			sit++;
+		}
+	}
+
+	printf("\t\t\t\t Number of Student | %d | & Available Seat | %d |",(sit-1),(lim-(sit-1)));
+	if(flag==1){
+		printf("\n\t\t\tRequested Student could not be found!");
+	}
+	getch();
+	fclose(f);
 }
