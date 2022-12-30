@@ -7,6 +7,7 @@ FEATURES :
 ◌ Assign a room
 ◌ Shows All Student Record
 ◌ Shows Individual Student Record By Searching
+◌ Shows Individual Room Details By Searching
 ◌ Can Edit Individual Student Record
 ◌ Can Delete Individual Student Record
 
@@ -26,8 +27,10 @@ INFORMATION’S THAT WILL STORE AND PROVIDE :
 
 ![HMS_Search](https://user-images.githubusercontent.com/119602384/210004290-d7d3e606-7c59-430f-b66b-e2c4c496f864.png)
 
-CREDENTIALS: 
+# CREDENTIALS:
+
 ◌ Username: admin
+
 ◌ Password: 12345
 
 ![HMS_Login](https://user-images.githubusercontent.com/119602384/210004326-b6613038-c62f-4f10-b082-113ba3d1147c.png)
